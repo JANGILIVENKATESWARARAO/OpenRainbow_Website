@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.AssemblyInfoInputs.cache
+/ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.assets.cache
+/.vs/ORS_website
+/ORS_website.Server
