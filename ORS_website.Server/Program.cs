@@ -1,3 +1,6 @@
+using ORS_website.Server.Contracts;
+using ORS_website.Server.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+services.AddTransient<IDbRepository, DbRepository>();
+builder.Services.AddTransient<IWebsiteService, WebsiteService>();
 
 var app = builder.Build();
 
