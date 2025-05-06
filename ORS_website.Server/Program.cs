@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-services.AddTransient<IDbRepository, DbRepository>();
+builder.Services.AddTransient<IDbRepository, DbRepository>();
 builder.Services.AddTransient<IWebsiteService, WebsiteService>();
 
 var app = builder.Build();

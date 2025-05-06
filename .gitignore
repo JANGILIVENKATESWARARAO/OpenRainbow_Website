@@ -6,3 +6,15 @@
 /ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.assets.cache
 /.vs/ORS_website
 /ORS_website.Server
+/.vs
+/ORS_website.Server/obj/ORS_website.Server.csproj.nuget.dgspec.json
+/ORS_website.Server/obj/project.nuget.cache
+/ORS_website.Server/obj/ORS_website.Server.csproj.nuget.g.props
+/ORS_website.Server/obj/ORS_website.Server.csproj.nuget.g.targets
+/ORS_website.Server/obj/project.assets.json
+/ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.AssemblyInfo.cs
+/ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.csproj.AssemblyReference.cache
+/ORS_website.Server/obj/Debug/net8.0/ORS_website.Server.GeneratedMSBuildEditorConfig.editorconfig
+/ORS_website.Server/obj/Debug/net8.0/spa.proxy.json
+/ors_website.client/obj/Debug
+/ors_website.client/package-lock.json
