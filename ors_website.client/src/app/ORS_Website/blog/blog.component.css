@@ -1,0 +1,41 @@
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    height: 50px;
+    width: 80px;
+    color:black;
+  
+  }
+  
+  .tabs button {
+    padding: 8px 16px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+  }
+
+  .tabs .active {
+    background: #333;
+    color: #fff;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .orange { background-color: #ff5722; color: #fff; }
+  .white { background-color: #f5f5f5; }
+  .pink { background-color: #e91e63; color: #fff; }
+  .green { background-color: #4caf50; color: #fff; }
+  .purple { background-color: #673ab7; color: #fff; }
+  

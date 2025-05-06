@@ -1,0 +1,44 @@
+<header class="header">
+    <div class="logo">
+        <div>
+            <img
+                src="https://static.wixstatic.com/media/77e111_f92536cde15043ecb69e3821ebd8eae0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/77e111_f92536cde15043ecb69e3821ebd8eae0%7Emv2.png" />
+        </div>
+        <div>open<span> rainbow</span></div>
+        <div></div>
+    </div>
+
+    <nav class="nav_desk">
+        <a href="#">IT Solutions</a>
+        <a href="#">Services</a>
+
+        <!-- Company Dropdown -->
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle">
+                <span class="company-link">Company <i class="fa-solid fa-caret-down"></i></span>
+            </a>
+
+            <div class="dropdown-menu">
+                <a href="#">About</a>
+                <a href="#">Our Partners</a>
+                <a href="#">Blogs</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+
+        <a href="#">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+</header>
+
+<div class="mobile-menu" *ngIf="menuOpen">
+    <button class="close-btn" (click)="toggleMenu()">✕</button>
+
+    <nav class="nav_mobile">
+        <a href="#">IT Solutions</a>
+        <a href="#">Services</a>
+        <a href="#">Company</a>
+        <a href="#">Contact</a>
+    </nav>
+</div>

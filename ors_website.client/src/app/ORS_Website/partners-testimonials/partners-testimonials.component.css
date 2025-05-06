@@ -1,0 +1,54 @@
+.partners-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+  
+  .partners-carousel-track {
+    display: flex;
+    animation: scroll-left 60s linear infinite;
+    width: max-content;
+    height: 100%;
+  }
+  
+  .partner-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-right: 0; 
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0 10px;
+  }
+  
+  .partner-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .partner-info {
+    margin-top: 0.5rem;
+  }
+  
+  .tags span {
+    display: inline-block;
+    background: #eee;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

@@ -1,0 +1,19 @@
+<p style="text-align: center;font-size:32px;font-weight: 600;margin-top: 30px;">Blog Page</p>
+
+<div class="tabs">
+  <button 
+    *ngFor="let tab of tabs" 
+    (click)="selectTab(tab)" 
+    [class.active]="selectedTab === tab">
+    {{ tab }}
+  </button>
+</div>
+
+<div class="grid-container">
+  <div 
+    class="card" 
+    *ngFor="let card of filteredCards" 
+    [ngClass]="card.color">
+    <h4>{{ card.title }}</h4>
+  </div>
+</div>

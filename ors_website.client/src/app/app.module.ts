@@ -8,6 +8,13 @@ import { AdminCareerComponent } from './ORS_Website/admin-career/admin-career.co
 import { ApplyCareerComponent } from './ORS_Website/apply-career/apply-career.component';
 import { AdminBlogComponent } from './ORS_Website/admin-blog/admin-blog.component';
 import { QuestionaryComponent } from './ORS_Website/questionary/questionary.component';
+import { AboutComponent } from './ORS_Website/about/about.component';
+import { BlogComponent } from './blog/blog.component';
+import { CareerComponent } from './ORS_Website/career/career.component';
+import { ContactComponent } from './ORS_Website/contact/contact.component';
+import { HeaderComponent } from './ORS_Website/header/header.component';
+import { OrsWebsiteComponent } from './ORS_Website/ors-website/ors-website.component';
+import { PartnersTestimonialsComponent } from './ORS_Website/partners-testimonials/partners-testimonials.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +22,14 @@ import { QuestionaryComponent } from './ORS_Website/questionary/questionary.comp
     AdminCareerComponent,
     ApplyCareerComponent,
     AdminBlogComponent,
-    QuestionaryComponent
+    QuestionaryComponent,
+    AboutComponent,
+    BlogComponent,
+    CareerComponent,
+    ContactComponent,
+    HeaderComponent,
+    OrsWebsiteComponent,
+    PartnersTestimonialsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

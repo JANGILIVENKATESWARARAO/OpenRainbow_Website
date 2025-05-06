@@ -1,0 +1,40 @@
+<p style="text-align: center;font-size:32px;font-weight: 600;margin-top: 30px;">Contact Page</p>
+<div class="contact-section">
+    <!-- Left Side (two stacked boxes) -->
+
+    <div class="left-half">
+        <div class="contact-info">
+            <h4>Our Office</h4>
+            <p><strong>Address:</strong> 123 Street Name, City, Country</p>
+            <p><strong>Email:</strong> contact&#64;yourcompany.com</p>
+            <p><strong>Phone:</strong> +91-9876543210</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Right Side (form fills full height) -->
+    <div class="right-half">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="mb-3">
+                <label>Your Name</label>
+                <input type="text" name="name" [(ngModel)]="form.name" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" [(ngModel)]="form.email" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label>Phone No</label>
+                <input type="tel" name="phone" [(ngModel)]="form.phone" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label>Your Message</label>
+                <textarea name="message" [(ngModel)]="form.message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!contactForm.form.valid">Submit</button>
+        </form>
+    </div>
+</div>

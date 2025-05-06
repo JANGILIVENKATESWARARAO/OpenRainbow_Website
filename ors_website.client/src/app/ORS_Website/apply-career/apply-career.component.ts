@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import countryCodesData from '../../common/assets/countryCodes.json';
 
@@ -6,6 +7,8 @@ declare var intlTelInput: any;
 
 @Component({
   selector: 'app-apply-career',
+  standalone: true,
+  imports: [ReactiveFormsModule, FormsModule, CommonModule],
   templateUrl: './apply-career.component.html',
   styleUrl: './apply-career.component.css'
 })

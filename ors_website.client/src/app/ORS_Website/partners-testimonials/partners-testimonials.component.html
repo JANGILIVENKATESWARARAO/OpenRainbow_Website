@@ -1,0 +1,8 @@
+<p style="text-align: center;font-size:32px;font-weight: 600;margin: 30px 0;">Partners Page</p>
+<div class="partners-carousel-wrapper">
+    <div class="partners-carousel-track">
+        <div class="partner-card" *ngFor="let partner of duplicatedPartners">
+            <img [src]="partner.image" alt="{{partner.name}}" />
+        </div>
+    </div>
+</div>

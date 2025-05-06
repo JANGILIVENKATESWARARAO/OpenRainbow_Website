@@ -1,0 +1,91 @@
+/* Overall Table Padding */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 1s ease;
+  }
+  
+  /* Table Header */
+  th {
+    padding: 12px 20px; /* Increased padding */
+    background-color: white; /* White background */
+    color: #333; /* Dark text color for contrast */
+    text-align: left;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow to make the header stand out */
+    border-bottom: 2px solid #ddd; /* Optional: Adds a subtle border for definition */
+  }
+  
+  th:hover {
+    background-color: #f8f8f8; /* Slightly change background color on hover */
+  }
+  
+  /* Table Rows */
+  td {
+    padding: 12px 20px; /* Increased padding for cells */
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle; /* Center-align content vertically */
+  }
+  
+  /* Hover Effect for Table Rows */
+  .table-row {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .table-row:hover {
+    background-color: #f5f5f5;
+    
+  }
+  
+  /* Apply Button Styling */
+  .apply-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 10px 20px; /* Increased padding for button */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  
+  /* Alternating Row Colors */
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Smooth Animations for Table Load */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Add padding around the table */
+  .careers-table {
+    margin: 20px auto; /* Center the table and add margin */
+    padding: 10px;
+    max-width: 1200px; /* Optional: limit the table width for better control */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
+    border-radius: 10px; /* Optional: round the corners of the table */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    td, th {
+      padding: 8px 12px; /* Reduce padding on small screens */
+    }
+  
+    .apply-btn {
+      font-size: 14px; /* Adjust button size for smaller screens */
+      padding: 8px 16px;
+    }
+  }
+  

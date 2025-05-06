@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ors_website.client\\ors_website.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ORS_website.Server\\ORS_website.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

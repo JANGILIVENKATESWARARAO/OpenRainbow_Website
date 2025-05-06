@@ -1,0 +1,30 @@
+<p style="text-align: center;font-size:32px;font-weight: 600;margin-top: 30px;">Career's Page</p>
+<div class="careers-table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Job ID</th>
+          <th>Job Role</th>
+          <th>Job Description</th>
+          <th>No. of Openings</th>
+          <th>Experience</th>
+          <th>Skills</th>
+          <th>End Date</th>
+          <th>Apply Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs" class="table-row">
+          <td>{{ job.jobId }}</td>
+          <td>{{ job.jobRole }}</td>
+          <td>{{ job.jobDesc }}</td>
+          <td>{{ job.noOfOpenings }}</td>
+          <td>{{ job.experience }}</td>
+          <td>{{ job.skills }}</td>
+          <td>{{ job.endDate }}</td>
+          <td><a [href]="job.applyLink" class="apply-btn">Apply</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

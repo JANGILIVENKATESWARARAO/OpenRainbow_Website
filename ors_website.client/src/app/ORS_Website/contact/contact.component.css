@@ -1,0 +1,96 @@
+.contact-section {
+    display: flex;
+    height: 100%;
+    min-height: 600px;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 30px;
+}
+
+/* LEFT HALF */
+.left-half {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* RIGHT HALF */
+.right-half {
+    flex: .8;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Contact Info Box */
+.contact-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: .5;
+}
+
+/* Map Box */
+.map-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    flex: 1.5;
+    display: flex;
+}
+
+.map-container iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Responsive Stack on Small Screens */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .left-half,
+    .right-half {
+        width: 100%;
+    }
+}
