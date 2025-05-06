@@ -117,6 +117,11 @@ namespace ORS_website.Server.Services
 
             return await _dbRepository.ExecuteProcedureV2Async<bool>($"{Schema.DBO}.{StoredProcedure.S_INS_CATEGORY}", parameters);
         }
+
+        public async Task<CountryCodes> GetCountryCodes()
+        {
+            return await _dbRepository.ExecuteProcedureV2Async<CountryCodes>($"{Schema.DBO}.{StoredProcedure.S_GET_COUNTRY_CODES}");
+        }
     }
     #endregion
 }

@@ -26,6 +26,7 @@
             public const string S_GET_ADMIN_BLOGS = "S_GetAdminBlogs";
             public const string S_GET_CAREERS = "S_GetCareers";
             //public const string S_GET_APPLY_CAREER = "S_GetApplyCareer";
+            public const string S_GET_COUNTRY_CODES = "S_GetCountryCodes";
             #endregion
         }
     }

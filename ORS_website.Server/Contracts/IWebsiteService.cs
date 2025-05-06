@@ -14,5 +14,7 @@ namespace ORS_website.Server.Contracts
         Task<bool> InsertSkill(string skillName);
         Task<bool> InsertExperience(string experienceRange);
         Task<bool> InsertCategory(string categoryType);
+        Task<CountryCodes> GetCountryCodes();
+
     }
 }

@@ -93,6 +93,14 @@ namespace ORS_website.Server.Controllers
             return Ok();
         }
 
+        [HttpGet("GetCountryCodes")]
+        public async Task<IActionResult> GetCountryCodes()
+        {
+            var result = await _websiteService.GetCountryCodes();
+
+            return Ok(result);
+        }
+
     }
 
 }
