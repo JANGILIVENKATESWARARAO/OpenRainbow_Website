@@ -1,0 +1,32 @@
+<div class="form-container">
+    <h2 style="text-align: center;font-weight: 800;">Query Form</h2>
+    <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" formControlName="fullName" required />
+            <div *ngIf="applyForm.get('fullName').hasError('pattern')" class="error-message">Only alphabets allowed.
+            </div>
+        </div>
+
+        <!--------- Phone and Country code-->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="query-phone" type="tel" class="form-control" formControlName="phone"
+                placeholder="Enter phone number" />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" formControlName="email" placeholder="name@gmail.com" required />
+            <div *ngIf="applyForm.get('email').hasError('email')" class="error-message">Invalid email format.</div>
+        </div>
+
+        <div class="form-group">
+            <label>Have any questions? Ask us:</label>
+            <textarea formControlName="query" required></textarea>
+        </div>
+
+        <button type="submit" [disabled]="!applyForm.valid">Submit</button>
+    </form>
+</div>

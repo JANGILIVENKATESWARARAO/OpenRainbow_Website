@@ -1,0 +1,55 @@
+<div class="form-container">
+    <h2 class="text-center mb-4 text-lg font-semibold">Blog</h2>
+  
+    <form> 
+      <div class="form-group">
+      <label for="title">Title of blog:</label>
+        <input type="text" id="title" name="title" placeholder="Title of blog"  />
+      </div>
+     
+      <div class="form-group">
+        <label for="title">Sub title of blog:</label>
+        <input type="text" id="title" name="title" placeholder="Title of blog"  />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Blog Description:</label> 
+        <textarea id="description" name="description" placeholder="Description" required></textarea>
+      </div>
+
+      <div class="form-group">
+       <label for="type">Type of Blog:</label> 
+        <select id="type" name="type" required>
+          <option value="">Select type</option>
+          <option value="article">Article</option>
+          <option value="video">Video</option>
+          <option value="image">Image</option>
+          <option value="event">Event</option>
+          <option value="news">News</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+       <label for="file">Attach Images/Videos:</label> 
+        <input type="file" id="file" name="file" required />
+      </div>
+  
+      <div class="form-group">
+        <label >Links:</label> 
+        <input type="url" name="links" placeholder="Links "/>
+      </div>
+
+      <div class="form-group">
+        <label >Posted by:</label>
+        <input type="text" name="name" placeholder="Posted by "  />
+      </div>
+
+      <div class="form-group">
+        <label >End Date</label>
+        <input type="Date"  name="date"   />
+      </div>
+
+        <button type="submit" disabled>Submit</button>
+    </form>
+  </div>
+  

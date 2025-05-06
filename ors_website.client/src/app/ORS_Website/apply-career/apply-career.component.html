@@ -1,0 +1,113 @@
+<div class="form-container">
+    <h2 style="text-align: center;font-weight: 800;">Apply Link Form</h2>
+    <form [formGroup]="applyForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+        
+        <!-- Readonly Fields -->
+        <div class="form-group">
+            <label>Job Title</label>
+            <input type="text" formControlName="jobTitle" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Job ID</label>
+            <input type="text" formControlName="jobId" readonly />
+        </div>
+
+        <!-- Editable Fields -->
+        <div class="form-group">
+            <label>Full Name</label> <!--required--->
+            <input type="text" formControlName="fullName" required />
+        </div>
+
+        <!-------- Phone and Country code -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" class="form-control" formControlName="phone"
+                placeholder="Enter phone number" />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label><!--required--->
+            <input type="email" formControlName="email" placeholder="name@gmail.com" required />
+
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience (in years)</label>
+            <select id="experience" formControlName="experience" required>
+                <option value="" disabled>Select experience</option>
+                <option *ngFor="let year of experienceOptions" [value]="year">{{ year }}</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="prevOrg">Previous Organization</label><!--required--->
+                <input id="prevOrg" type="text" formControlName="prevOrg" />
+            </div>
+            <div class="form-group">
+                <label for="prevOrgLoc">Previous Org Location</label><!--required--->
+                <input id="prevOrgLoc" type="text" formControlName="prevOrgLoc" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="currentCtc">Current CTC</label><!--required--->
+                <input id="currentCtc" type="text" formControlName="currentCtc" />
+            </div>
+            <div class="form-group">
+                <label for="expectedCtc">Expected CTC</label>
+                <input id="expectedCtc" type="text" formControlName="expectedCtc" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Why do you want to join in a new company?</label><!--required--->
+            <textarea formControlName="whyJoinInNewCompany" required></textarea>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Upload Resume</label>
+                <input type="file" (change)="onFileChange($event)" />
+            </div>
+            <div class="form-group">
+                <label>Upload CV</label>
+                <input type="file" (change)="onFileChange($event)" />
+            </div>
+        </div>
+
+        <!-- Terms & Conditions -->
+        <div class="form-group checkbox-group" style="position: relative;">
+            <label class="checkbox-label">
+                <input type="checkbox" formControlName="terms" #termsCheckbox [checked]="termsAccepted"
+                    [required]="true" />
+                I agree to the
+                <span class="terms-text" (mouseenter)="showPopup = true"
+                    style="padding-left:5px;color: blue;text-decoration: underline;cursor: pointer;">
+                    terms and conditions
+                </span>
+            </label>
+
+            <!-- Modal-like popup -->
+            <div class="popup-box" *ngIf="showPopup" (mouseleave)="showPopup = false" (mouseenter)="showPopup = true">
+                <div class="popup-content">
+                    <button class="close-btn" (click)="showPopup = false">&times;</button>
+                    <strong>Terms and Conditions</strong>
+                    <p>
+                        This is a sample terms and conditions text. Add as much content as you like here.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula...
+                    </p>
+
+                    <!-- Accept Button -->
+                    <div style="text-align: right; margin-top: 10px;">
+                        <button class="accept-btn" (click)="acceptTerms()">Accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" [disabled]="!applyForm.valid">Apply Now</button>
+    </form>
+</div>
